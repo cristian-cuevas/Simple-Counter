@@ -4,21 +4,18 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+const Home = ({counter, uno, dos, tres, cuatro, cinco, seis}) => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container justify-content-center">
+			<div className="d-flex flex-row-reverse justify-content-center fs-1 mt-5">
+				<div className="p-3 bg-dark text-white border"><i class="fa-solid fa-clock"></i></div>
+				<div className="p-3 bg-dark text-white  border"> {Math.floor(uno % 10)}  </div>
+				<div className="p-3 bg-dark text-white  border">{Math.floor(dos % 10)}</div>
+				<div className="p-3 bg-dark text-white border">{Math.floor(tres % 10)}</div>
+				<div className="p-3 bg-dark text-white border">{Math.floor(cuatro % 10)}</div>
+				<div className="p-3 bg-dark text-white border">{Math.floor(cinco % 10)}</div>
+				<div className="p-3 bg-dark text-white border">{Math.floor(seis % 10)}</div>
+			</div>
 		</div>
 	);
 };
